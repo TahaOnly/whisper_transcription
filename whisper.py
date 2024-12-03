@@ -43,32 +43,3 @@ for filename in os.listdir(input_dir):
         print("\n" + "="*50)  # Separator for better readability
 
 print("All files have been processed.")
-
-
-# from faster_whisper import WhisperModel
-
-# model_size = "large-v3"
-
-# # Specify a custom directory for caching models
-# # custom_cache_dir = "D:/Whisper_Test_Models"  # Replace with your desired directory
-
-# model = WhisperModel(model_size, device="cpu", compute_type="int8")
-
-# segments, info = model.transcribe("./Recordings/chorong.mp3", beam_size=5, language='en')
-
-# print("Detected language '%s' with probability %f" % (info.language, info.language_probability))
-
-# full_transcription = ""
-
-# # Iterate over each segment and concatenate the text
-# for segment in segments:
-#     full_transcription += segment.text + " "  # Add a space between segments
-#     # print("[%.2fs -> %.2fs] %s" % (segment.start, segment.end, segment.text))
-
-# # Write the concatenated transcription to a text file
-# with open("chorong.txt", "w", encoding="utf-8") as file:
-#     file.write(full_transcription.strip())  # Write the text without trailing spaces
-
-# # Print the full concatenated transcription to the console
-# print("\nFull Transcription:")
-# print(full_transcription.strip())
