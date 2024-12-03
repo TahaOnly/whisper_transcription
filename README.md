@@ -6,6 +6,7 @@ While social robots offer significant potential for personal and social assistan
 
 ## Files
 whisper.py -> Uses OpenAI's Whisper large-v3 model [1] to transcribe english audio recordings to english script transcriptions.
+Quant_analysis_anova_t_test.ipynb -> Analysis done using Anova and t-test for H1,2 and 3 hypothesis.
 
 ## Source
 [1] https://huggingface.co/openai/whisper-large-v3
