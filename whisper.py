@@ -15,7 +15,7 @@ model = WhisperModel(model_size, device="cpu", compute_type="int8")
 
 # Loop through each file in the recordings folder
 for filename in os.listdir(input_dir):
-    if filename.endswith(".mp3") or filename.endswith(".wav"):  # Adjust if needed for other formats
+    if filename.endswith(".mp3") or filename.endswith(".wav"):  
         audio_path = os.path.join(input_dir, filename)
         transcription_filename = os.path.splitext(filename)[0] + ".txt"  # Save as same name with .txt extension
         transcription_path = os.path.join(output_dir, transcription_filename)
@@ -37,7 +37,7 @@ for filename in os.listdir(input_dir):
         with open(transcription_path, "w", encoding="utf-8") as file:
             file.write(full_transcription.strip())  # Write the text without trailing spaces
 
-        # Print the full concatenated transcription to the console (optional)
+        # Print the full concatenated transcription to the console
         print("\nFull Transcription:")
         print(full_transcription.strip())
         print("\n" + "="*50)  # Separator for better readability
